@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AddBookForm from "./components/AddBookForm";
+import BookList from "./components/BookList";
+import ExportButton from "./components/ExportButton";
+import { Container, Typography } from "@mui/material";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Typography variant="h3" align="center" gutterBottom sx={{ mt: 4 }}>
+        Book Inventory Management System
+      </Typography>
+      <AddBookForm />
+      <BookList />
+      <ExportButton />
+    </Container>
   );
-}
+};
 
 export default App;
